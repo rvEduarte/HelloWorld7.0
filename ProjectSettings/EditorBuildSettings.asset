@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/OldScene/Kurt/Main Scene/My Main Scene.unity
+    guid: 7703eb64dcdbed5499ec6ddc8c677d18
+  - enabled: 1
+    path: Assets/OldScene/Kurt/Main Scene/Main.unity
+    guid: 7d614dea491e72a418a4c6e9bcb7ca25
+  - enabled: 1
+    path: Assets/OldScene/Kurt/C# Scenes/C# Scene.unity
+    guid: 3f866043d30a77b47a962b47ca03d820
+  - enabled: 1
+    path: Assets/OldScene/Kurt/C# Scenes/BeginnerLevels.unity
+    guid: 60ea518edeae4134eba5593a0696e37d
+  - enabled: 1
+    path: Assets/Scene/VincentScene/Level1/Level1_Ph1.unity
+    guid: 4d71dcaabc33bad4ab2f9614b4a7cc4f
+  - enabled: 1
+    path: Assets/Scene/VincentScene/Level1/Level1_Ph2.unity
+    guid: 2e6b8f7e6e8c9fa49aa9e0edae440aac
+  - enabled: 1
+    path: Assets/Scene/VincentScene/Level1/Level1_Ph3.unity
+    guid: 7b0a205fb250c024589882582e7b93db
+  - enabled: 1
+    path: Assets/Scene/KurtScene/Main Scene/Scene1_Main.unity
+    guid: 697ec8f14ecec304c8f0fabfc2f616a1
+  - enabled: 1
+    path: Assets/Scene/KurtScene/Main Scene/Scene2.unity
+    guid: 9be38e485e80dc34da97c84bebc121c7
+  - enabled: 1
+    path: Assets/Scene/KurtScene/C# Scenes/C# Scene1.unity
+    guid: 44edffc108ee7934c89440cf071ce3d2
+  - enabled: 1
+    path: Assets/etits/Test/Scene/Test1.unity
+    guid: 35081e7e054af0b4baa76c973c65f11c
+  - enabled: 1
+    path: Assets/etits/Test/Scene/Test2.unity
+    guid: 29ba249a02e1f044a88c1eab3704d7a8
+  - enabled: 1
+    path: Assets/etits/Test/Scene/CSharp.unity
+    guid: 737cfcb7097451e4eaa98229142986d3
+  m_configObjects: {}
