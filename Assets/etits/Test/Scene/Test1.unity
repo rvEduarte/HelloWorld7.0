@@ -1213,8 +1213,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Leaderboards
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 61f77605ba1a3404a99fea410122638c, type: 2}
-  m_sharedMaterial: {fileID: -3316849062353181786, guid: 61f77605ba1a3404a99fea410122638c, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 0ed5c0c24ae4e0040b7823062cb746ab, type: 2}
+  m_sharedMaterial: {fileID: -8976961484713244822, guid: 0ed5c0c24ae4e0040b7823062cb746ab, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
