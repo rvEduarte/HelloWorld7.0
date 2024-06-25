@@ -44,4 +44,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/etits/Test/Scene/CSharp.unity
     guid: 737cfcb7097451e4eaa98229142986d3
+  - enabled: 1
+    path: Assets/etits/Test/Scene/Levels.unity
+    guid: 328759d32aa5a0f4299a8782a1bee18a
   m_configObjects: {}
