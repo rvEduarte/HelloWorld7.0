@@ -27,10 +27,11 @@ public class RunningTimer : MonoBehaviour
             
             
             
-            /*if(timerTxt.text == string.Format("{0:00}:{0:05}", minutes, seconds))     //FUTURE CODE NEEDED FOR ACQUIRING THE SET TIMER
+            if(timerTxt.text == string.Format("{0:00}:{0:05}", minutes, seconds))     //FUTURE CODE NEEDED FOR ACQUIRING THE SET TIMER
             {
                 Debug.Log("super10");
-            }*/
+                Time.timeScale = 0;
+            }
         }
     }
 }
