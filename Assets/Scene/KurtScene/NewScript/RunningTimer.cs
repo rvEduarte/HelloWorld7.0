@@ -13,15 +13,11 @@ public class RunningTimer : MonoBehaviour
     [SerializeField] TextMeshProUGUI textCompletion2;
     [SerializeField] TextMeshProUGUI textCompletion3;
 
-    //[SerializeField] TextMeshProUGUI TRIAL;
-
     [SerializeField] private Pause pauseMenu;
 
     float elapsedTime;
     public bool isPicked = false;
-
-    //float TrialTime;
-  
+ 
     void Update()
     {
         if (!pauseMenu.pause)
@@ -29,11 +25,6 @@ public class RunningTimer : MonoBehaviour
             if (isPicked == false)
             {
                 elapsedTime += Time.deltaTime;
-                //TrialTime += Time.deltaTime;
-
-               // int trialText = Mathf.RoundToInt(elapsedTime);
-
-                //TRIAL.text = trialText.ToString();
 
                 int minutes = Mathf.FloorToInt(elapsedTime / 60);
                 int seconds = Mathf.FloorToInt(elapsedTime % 60);
@@ -41,14 +32,11 @@ public class RunningTimer : MonoBehaviour
 
                 timerTxt.text = trialText;
 
-
                 if (timerTxt.text == string.Format("{0:00}:{0:31}", minutes, seconds))
                 {                   
                     string text1 = "100 score 30 sec.";
                     string weight1 = "#44";
-                    textCompletion1.text = "<alpha=" + weight1 + ">" + text1;
-
-                    //textCompletion1.text = "<font-weight=" +"\""+ weight1 +"\""+ ">" + text1 + "</font-weight>";
+                    textCompletion1.text = "<alpha=" + weight1 + ">" + text1;         //textCompletion1.text = "<font-weight=" +"\""+ weight1 +"\""+ ">" + text1 + "</font-weight>";
                 }
 
                 else if (timerTxt.text == string.Format("{0:00}:{0:46}", minutes, seconds))
@@ -65,14 +53,11 @@ public class RunningTimer : MonoBehaviour
                     string weight1 = "#44";
                     textCompletion3.text = "<alpha=" + weight1 + ">" + text3;
                 }
-
             }
             else 
             {
                 textComplete.text = timerTxt.text;
-            }
-      
-            
+            }         
         }
     }
 }
