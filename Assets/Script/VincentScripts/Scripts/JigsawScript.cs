@@ -12,6 +12,8 @@ public class JigsawScript : MonoBehaviour
 
     private bool pickUpAllowed;
 
+    public RunningTimer timer;
+
     // Use this for initialization
     private void Start()
     {
@@ -23,7 +25,12 @@ public class JigsawScript : MonoBehaviour
     private void Update()
     {
         if (pickUpAllowed && Input.GetKeyDown(KeyCode.E))
+        {
             PickUp();
+            timer.isPicked = true;
+
+        }
+            
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
