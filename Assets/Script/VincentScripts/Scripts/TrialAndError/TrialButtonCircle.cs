@@ -18,7 +18,7 @@ public class TrialButtonCircle : MonoBehaviour
     public CanvasRenderer yourString;
     //public CanvasRenderer yourX;
 
-    public CanvasRenderer yourText1;
+    //public CanvasRenderer yourText1;
     public CanvasRenderer yourText2;
     public CanvasRenderer yourText3;
     public CanvasRenderer yourText4;
@@ -73,8 +73,8 @@ public class TrialButtonCircle : MonoBehaviour
             // CanvasRenderer canvasRenderer999 = yourX.GetComponent<CanvasRenderer>();
             //canvasRenderer999.cull = true;
 
-            CanvasRenderer canvasRenderer9 = yourText1.GetComponent<CanvasRenderer>();
-            canvasRenderer9.cull = true;
+            //CanvasRenderer canvasRenderer9 = yourText1.GetComponent<CanvasRenderer>();
+            //canvasRenderer9.cull = true;
 
             CanvasRenderer canvasRenderer10 = yourText2.GetComponent<CanvasRenderer>();
             canvasRenderer10.cull = true;
@@ -130,8 +130,8 @@ public class TrialButtonCircle : MonoBehaviour
             //CanvasRenderer canvasRenderer999 = yourX.GetComponent<CanvasRenderer>();
             //canvasRenderer999.cull = false;
 
-            CanvasRenderer canvasRenderer9 = yourText1.GetComponent<CanvasRenderer>();
-            canvasRenderer9.cull = false;
+            //CanvasRenderer canvasRenderer9 = yourText1.GetComponent<CanvasRenderer>();
+            //canvasRenderer9.cull = false;
 
             CanvasRenderer canvasRenderer10 = yourText2.GetComponent<CanvasRenderer>();
             canvasRenderer10.cull = false;
