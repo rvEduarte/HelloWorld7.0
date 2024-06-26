@@ -6435,8 +6435,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: '<color="red">Note:</color> right-click to fire '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 223a566053408644fa1f6af05a4d111a, type: 2}
-  m_sharedMaterial: {fileID: -846784761395205565, guid: 223a566053408644fa1f6af05a4d111a, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
+  m_sharedMaterial: {fileID: 2100000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -42365,7 +42365,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timerTxt: {fileID: 8848009812941731983}
+  textComplete: {fileID: 0}
+  textCompletion1: {fileID: 0}
+  textCompletion2: {fileID: 0}
+  textCompletion3: {fileID: 0}
   pauseMenu: {fileID: 4784326844137283728}
+  isPicked: 0
 --- !u!1 &4785427727226190030
 GameObject:
   m_ObjectHideFlags: 0
@@ -66122,7 +66127,6 @@ MonoBehaviour:
   yourDrop2: {fileID: 1015189633738057292}
   yourCanvas: {fileID: 4598597543338876417}
   yourString: {fileID: 2106113525984076664}
-  yourText1: {fileID: 0}
   yourText2: {fileID: 4903580083386233821}
   yourText3: {fileID: 2316318423186729076}
   yourText4: {fileID: 990695213268373998}
