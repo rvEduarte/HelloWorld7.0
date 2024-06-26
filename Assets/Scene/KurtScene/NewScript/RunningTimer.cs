@@ -13,10 +13,14 @@ public class RunningTimer : MonoBehaviour
     [SerializeField] TextMeshProUGUI textCompletion2;
     [SerializeField] TextMeshProUGUI textCompletion3;
 
+    //[SerializeField] TextMeshProUGUI TRIAL;
+
     [SerializeField] private Pause pauseMenu;
 
     float elapsedTime;
     public bool isPicked = false;
+
+    //float TrialTime;
   
     void Update()
     {
@@ -25,11 +29,20 @@ public class RunningTimer : MonoBehaviour
             if (isPicked == false)
             {
                 elapsedTime += Time.deltaTime;
+                //TrialTime += Time.deltaTime;
+
+               // int trialText = Mathf.RoundToInt(elapsedTime);
+
+                //TRIAL.text = trialText.ToString();
+
                 int minutes = Mathf.FloorToInt(elapsedTime / 60);
                 int seconds = Mathf.FloorToInt(elapsedTime % 60);
-                timerTxt.text = string.Format("{0:00}:{1:00}", minutes, seconds);
+                string trialText = string.Format("{0:00}:{1:00}", minutes, seconds);
 
-                if(timerTxt.text == string.Format("{0:00}:{0:31}", minutes, seconds))
+                timerTxt.text = trialText;
+
+
+                if (timerTxt.text == string.Format("{0:00}:{0:31}", minutes, seconds))
                 {                   
                     string text1 = "100 score 30 sec.";
                     string weight1 = "#44";
@@ -40,16 +53,17 @@ public class RunningTimer : MonoBehaviour
 
                 else if (timerTxt.text == string.Format("{0:00}:{0:46}", minutes, seconds))
                 {
-                    string text2 = "80 score 50 sec.";
+                    string text2 = "80 score 45 sec.";
                     string weight1 = "#44";
                     textCompletion2.text = "<alpha=" + weight1 + ">" + text2;
                 }
 
-                else if (timerTxt.text == string.Format("{0:00}:{1:00}", minutes, seconds))
+                else if (trialText == "01:00")   //timerTxt.text == string.Format("{0}:{0:60}", minutes, seconds)
                 {
+                    Debug.Log("tite");
                     string text3 = "50 score 60 sec.";
                     string weight1 = "#44";
-                    textCompletion2.text = "<alpha=" + weight1 + ">" + text3;
+                    textCompletion3.text = "<alpha=" + weight1 + ">" + text3;
                 }
 
             }
