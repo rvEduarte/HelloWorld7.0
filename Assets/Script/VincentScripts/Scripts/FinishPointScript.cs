@@ -15,7 +15,7 @@ public class FinishPointScript : MonoBehaviour
            // gameCompletion.SetActive(true);
             Time.timeScale = 1f;
             UnlockNewLevel();
-            SceneControllerScript.instance.NextLevel();
+            //SceneController.instance.NextLevel();
         }
     }
 
