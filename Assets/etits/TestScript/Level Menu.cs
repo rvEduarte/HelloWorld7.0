@@ -8,9 +8,11 @@ public class LevelMenu : MonoBehaviour
 {
 
     public Button[] buttons;
+    public GameObject levelButtons;
 
     private void Awake()
     {
+        ButtonsArray();
         int unlockedLevel = PlayerPrefs.GetInt("UnlockedLevel", 1);
         for (int i = 0; i < buttons.Length; i++)
         {
@@ -26,5 +28,16 @@ public class LevelMenu : MonoBehaviour
         {
             string levelName = "Level" + levelId;
             SceneManager.LoadScene(levelName);
+        }
+
+        void ButtonsArray()
+        {
+        int childCount = levelButtons.transform.childCount;
+        buttons = new Button[childCount];
+
+        for (int i = 0; i < childCount; i++)
+        {
+            buttons[i] = levelButtons.transform.GetChild(i).gameObject.GetComponent<Button>();
+        }
         }
 }
