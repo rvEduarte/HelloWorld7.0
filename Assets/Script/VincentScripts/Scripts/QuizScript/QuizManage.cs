@@ -17,7 +17,7 @@ public class QuizManage : MonoBehaviour
         Debug.Log("SUPER DUPER TITE");
         
         generateQuestion();
-        //QnA.RemoveAt(currentQuestion);
+        QnA.RemoveAt(currentQuestion);
     }
 
     public void correct()

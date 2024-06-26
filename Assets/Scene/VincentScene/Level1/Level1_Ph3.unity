@@ -32771,7 +32771,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7431033525947664118}
+      - m_Target: {fileID: 3497884436216846499}
         m_TargetAssemblyTypeName: AnswersScript, Assembly-CSharp
         m_MethodName: Answer
         m_Mode: 1
@@ -69438,7 +69438,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7431033525947664118}
+      - m_Target: {fileID: 1869991224178014979}
         m_TargetAssemblyTypeName: AnswersScript, Assembly-CSharp
         m_MethodName: Answer
         m_Mode: 1
@@ -72029,7 +72029,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7431033525947664118}
+      - m_Target: {fileID: 4135916860650790567}
         m_TargetAssemblyTypeName: AnswersScript, Assembly-CSharp
         m_MethodName: Answer
         m_Mode: 1
