@@ -12,15 +12,19 @@ public class QuizManage : MonoBehaviour
 
     public TMP_Text QuestionTxt;
 
-    private void Start()
+    private void Awake()
     {
-        QnA.RemoveAt(currentQuestion);
+        Debug.Log("SUPER DUPER TITE");
+        
         generateQuestion();
+        //QnA.RemoveAt(currentQuestion);
     }
 
     public void correct()
     {
+        
         generateQuestion();
+        QnA.RemoveAt(currentQuestion);
     }
 
     void SetAnswer ()
@@ -45,4 +49,6 @@ public class QuizManage : MonoBehaviour
         SetAnswer();
     }
 }
+
+
 
