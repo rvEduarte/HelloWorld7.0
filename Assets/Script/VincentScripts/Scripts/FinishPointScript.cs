@@ -16,19 +16,6 @@ public class FinishPointScript : MonoBehaviour
             Time.timeScale = 1f;
 
             SceneController.instance.NextLevel();
-            
-            UnlockNewLevel();
-        }
-    }
-
-    void UnlockNewLevel()
-    {
-        if(SceneManager.GetActiveScene().buildIndex >= PlayerPrefs.GetInt("ReachedIndex"))
-        {
-            PlayerPrefs.SetInt("ReachedIndex", SceneManager.GetActiveScene().buildIndex + 1);
-            PlayerPrefs.SetInt("UnclockLevel1", PlayerPrefs.GetInt("UnlockedLevel1", 1) + 1);
-            PlayerPrefs.Save();
-
 
         }
     }
