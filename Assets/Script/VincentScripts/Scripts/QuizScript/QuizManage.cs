@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using JetBrains.Annotations;
 
 public class QuizManage : MonoBehaviour
 {
@@ -10,21 +11,44 @@ public class QuizManage : MonoBehaviour
     public GameObject[] options;
     public int currentQuestion;
 
-    public TMP_Text QuestionTxt;
+    public TMP_Text questionTxt;
 
-    private void Awake()
+    public GameObject completionPanel;
+    public GameObject quizPanel;
+
+    public TextMeshProUGUI quizScore;
+
+    int totalQuestions = 0;
+    public int scoreCount = 0;
+
+    private void Start()
     {
-        Debug.Log("SUPER DUPER TITE");
+        totalQuestions = QnA.Count;
+        completionPanel.SetActive(false);
         
         generateQuestion();
-        QnA.RemoveAt(currentQuestion);
+        //QnA.RemoveAt(currentQuestion);
+    }
+
+    public void GameOver()
+    {
+        completionPanel.SetActive(true);
+        quizPanel.SetActive(false);
+        quizScore.text = scoreCount +"/"+ totalQuestions;
     }
 
     public void correct()
     {
-        
-        generateQuestion();
+        scoreCount += 1;
         QnA.RemoveAt(currentQuestion);
+        generateQuestion();
+        
+    }
+
+    public void wrong()
+    {
+        QnA.RemoveAt(currentQuestion);
+        generateQuestion();
     }
 
     void SetAnswer ()
@@ -43,10 +67,18 @@ public class QuizManage : MonoBehaviour
 
     void generateQuestion()
     {
-        currentQuestion = Random.Range(0, QnA.Count);
+        if(QnA.Count > 0)
+        {
+            currentQuestion = Random.Range(0, QnA.Count);
 
-        QuestionTxt.text = QnA[currentQuestion].Questions;
-        SetAnswer();
+            questionTxt.text = QnA[currentQuestion].Questions;
+            SetAnswer();
+        }
+        else
+        {
+            Debug.Log("Out of question");
+            GameOver();
+        }
     }
 }
 
