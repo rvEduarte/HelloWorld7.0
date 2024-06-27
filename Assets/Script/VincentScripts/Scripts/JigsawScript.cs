@@ -10,6 +10,8 @@ public class JigsawScript : MonoBehaviour
     [SerializeField]
     private GameObject Greenportal;
 
+    public GameObject jigsawPanel;
+
     private bool pickUpAllowed;
 
     public RunningTimer timer;
@@ -17,6 +19,7 @@ public class JigsawScript : MonoBehaviour
     // Use this for initialization
     private void Start()
     {
+        jigsawPanel.SetActive(false);
         pickUpText.SetActive(false);
         Greenportal.SetActive(false);
     }
@@ -28,6 +31,7 @@ public class JigsawScript : MonoBehaviour
         {
             PickUp();
             timer.isPicked = true;
+            jigsawPanel.SetActive(true);
 
         }
             
