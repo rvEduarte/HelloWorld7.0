@@ -12,19 +12,20 @@ public class QuizManage : MonoBehaviour
     public int currentQuestion;
 
     public TMP_Text questionTxt;
+    public TextMeshProUGUI quizScoreText;
+    public TextMeshProUGUI scoreBoardText;
 
     public GameObject completionPanel;
     public GameObject quizPanel;
-    public GameObject movingPlatform;
 
-    public TextMeshProUGUI quizScore;
 
     int totalQuestions = 0;
-    public int scoreCount = 0;
+    int scoreCount = 0;
+    int scoreBoard = 0;
 
     private void Start()
     {
-        movingPlatform.SetActive(false);
+        //movingPlatform.SetActive(false);
         totalQuestions = QnA.Count;
         completionPanel.SetActive(false);
         
@@ -36,12 +37,14 @@ public class QuizManage : MonoBehaviour
     {
         completionPanel.SetActive(true);
         quizPanel.SetActive(false);
-        quizScore.text = scoreCount +"/"+ totalQuestions;
+        quizScoreText.text = scoreCount +"/"+ totalQuestions;
+        scoreBoardText.text = scoreBoard.ToString();
     }
 
     public void correct()
     {
         scoreCount += 1;
+        scoreBoard += 10;
         QnA.RemoveAt(currentQuestion);
         generateQuestion();
         
@@ -80,7 +83,6 @@ public class QuizManage : MonoBehaviour
         {
             Debug.Log("Out of question");
             GameOver();
-            int sub = 9 + 5;
         }
     }
 }

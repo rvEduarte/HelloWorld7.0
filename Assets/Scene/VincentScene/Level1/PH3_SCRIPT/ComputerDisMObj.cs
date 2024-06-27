@@ -18,11 +18,11 @@ public class ComputerDisMObj : MonoBehaviour
 
     public bool inside = false;
 
-    //public GameObject movingObject;
+    public GameObject movingObject;
     void Start()
     {
         answerPanel.SetActive(false);
-       // movingObject.SetActive(false);
+        movingObject.SetActive(false);
     }
 
     private void Update()
