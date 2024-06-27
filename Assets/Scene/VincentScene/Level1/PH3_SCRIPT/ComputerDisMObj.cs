@@ -49,5 +49,16 @@ public class ComputerDisMObj : MonoBehaviour
         }
     }
 
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.name.Equals("Player2.0"))
+        {
+            exla.SetActive(true);
+            Hint.SetActive(false);
+
+            //movingObject.SetActive(true);
+        }
+    }
+
 
 }

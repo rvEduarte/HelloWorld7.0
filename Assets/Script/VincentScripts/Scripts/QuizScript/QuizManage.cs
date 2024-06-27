@@ -15,6 +15,7 @@ public class QuizManage : MonoBehaviour
 
     public GameObject completionPanel;
     public GameObject quizPanel;
+    public GameObject movingPlatform;
 
     public TextMeshProUGUI quizScore;
 
@@ -23,6 +24,7 @@ public class QuizManage : MonoBehaviour
 
     private void Start()
     {
+        movingPlatform.SetActive(false);
         totalQuestions = QnA.Count;
         completionPanel.SetActive(false);
         
@@ -78,9 +80,11 @@ public class QuizManage : MonoBehaviour
         {
             Debug.Log("Out of question");
             GameOver();
+            int sub = 9 + 5;
         }
     }
 }
+
 
 
 
